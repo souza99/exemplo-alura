@@ -1,3 +1,4 @@
+import Botao from '../Botao';
 import CampoTexto from '../CampoTexto';
 import ListaSuspensa from '../LiscaSuspensa';
 import './Formulario.css';
@@ -31,9 +32,21 @@ const Formulario = () => {
                     placeholder="Digite o endereco da imagem"
                 />
                 <ListaSuspensa label="Time" itens={times} />
+                <Botao>
+                    Criar card
+                </Botao>
             </form>
         </section>
     );
 }
 
 export default Formulario;
+
+
+// <Botao>
+//    Criar card
+// </Botao>
+// Quando abrimos e fexamos um componente, estamos dizendo que vamos receber um conteudo
+// que do locar onde estamos invocando o componente vai ter que ler
+// como imagens, icones e textos, então o componente recebe isso como childrem, filhos de seu conteudo criado
+// originalmente
