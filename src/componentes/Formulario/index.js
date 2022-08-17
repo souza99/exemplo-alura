@@ -15,13 +15,19 @@ const Formulario = () => {
         'Inovação e gestão'
     ];
 
+    const aoSalvar = (evento) => {
+        evento.preventDefault();
+        console.log("form foi submetido");
+    }
+
     return (
         <section className='formulario'>
-            <form>
+            <form onSubmit={aoSalvar}>
                 <h2>Preenchar os dados para criar os cards de colaborador</h2>
                 <CampoTexto
-                    label="Nome"
-                    placeholder="Digite seu nome"
+                    label = "Nome"
+                    placeholder = "Digite seu nome"
+                    obrigatorio = {true}
                 />
                 <CampoTexto
                     label="Cargo"
@@ -50,3 +56,8 @@ export default Formulario;
 // que do locar onde estamos invocando o componente vai ter que ler
 // como imagens, icones e textos, então o componente recebe isso como childrem, filhos de seu conteudo criado
 // originalmente
+
+
+// evento 
+// o evento é o evento do próprio javaScript
+// é o comportamento padrão;
